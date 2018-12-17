@@ -47,7 +47,7 @@ const deleteById = (req, res) => {
     const table = req.params['table'];
     const id = req.params['id'];
     const model = m.getModel(table);
-    model.findByIdAndDelete(id)
+    model.findByIdAndRemove(id, {rawResult: true})
         .exec()
         .then(response => {
             res.json(response);
