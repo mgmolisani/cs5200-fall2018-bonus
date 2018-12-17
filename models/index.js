@@ -21,7 +21,7 @@ const getModel = (table1, table2) => {
                 collection: `${table1}_${table2}`,
                 strict: false
             }));
-            return model;
+            return models[`${table1}_${table2}`];
         }
     }
 };
